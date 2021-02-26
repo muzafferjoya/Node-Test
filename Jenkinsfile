@@ -14,7 +14,7 @@ node {
 
                  def identity=awsIdentity();
 
-                 s3Upload(bucket:"eroam-frontend", workingDir:'.', includePathPattern:'**/*');
+                 s3Upload(bucket:"eroam-front", workingDir:'.', includePathPattern:'**/*');
             }
 
         };
