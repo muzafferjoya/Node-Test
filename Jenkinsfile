@@ -6,7 +6,7 @@ node {
     
     stage('Upload') {
 
-        dir('/var/lib/jenkins/workspace/pipe2'){
+        dir('/var/lib/jenkins/workspace/sample'){
 
             pwd(); 
 
