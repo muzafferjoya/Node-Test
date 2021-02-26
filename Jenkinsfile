@@ -10,7 +10,7 @@ node {
 
             pwd(); 
 
-                 withAWS(region:'us-east-1',credentials:'397ec9da-8e18-46f3-a261-93d5dbf2e821') {
+                 withAWS(region:'us-east-1',credentials:'<aws_id>') {
 
                  def identity=awsIdentity();
 
