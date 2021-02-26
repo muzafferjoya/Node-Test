@@ -15,7 +15,7 @@
     "express",
     "Front-end"
   ],
-  "author": "Gustavo Apolinario <gustavo.guss@gmail.com>",
+  "author": "Muzaffar khan muzafferjoya@gmail.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
