@@ -19,5 +19,16 @@ node {
             }
 
         };
+
+	stage('Install Dependencies'){
+	
+	  sh 'npm install'
+	}
+
+	stage('Node Test'){
+	
+	sh 'npm run test'
+
+	}
     }
 }
