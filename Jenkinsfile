@@ -3,6 +3,21 @@ node {
     stage('Git clone'){
         git 'https://github.com/muzafferjoya/Node-Test.git'
     }
+
+    stage('Install Dependencies'){
+	sh 'npm install'
+}
+
+    stage('Node Test'){
+	sh 'npm run test'
+}
+
+
+    stage('Create S3 Bucket'){
+	sh 'aws s3 mb s3://muzaffar-khan'
+}
+
+
     
     stage('AWS Credentials Check') {
 
@@ -14,21 +29,12 @@ node {
 
                  def identity=awsIdentity();
 		
-
+		s3Upload(bucket: "muzaffar-khan", workingDir: '.', includePathPattern:'**/*');
                  
             }
 
         };
 
-	stage('Install Dependencies'){
-	
-	  sh 'npm install'
-	}
-
-	stage('Node Test'){
-	
-	sh 'npm run test'
-
 	}
     }
-}
+
