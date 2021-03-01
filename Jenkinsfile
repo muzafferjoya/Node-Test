@@ -1,7 +1,10 @@
 node {
     
+    stage('Git clone'){
+        git 'https://github.com/muzafferjoya/Node-Test.git'
+    }
     
-    stage('chk') {
+    stage('Upload') {
 
         dir('/var/lib/jenkins/workspace/pipe1'){
 
@@ -11,10 +14,9 @@ node {
 
                  def identity=awsIdentity();
 
-                 
+                 s3Upload(bucket:"eroam-front", workingDir:'.', includePathPattern:'**/*');
             }
 
         };
     }
-
 }
