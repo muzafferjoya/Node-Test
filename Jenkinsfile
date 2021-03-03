@@ -23,7 +23,7 @@ node {
 
                  def identity=awsIdentity();
 		
-		s3Upload(bucket: "muzaffar-khan", workingDir: '.', includePathPattern:'**/*', excludePathPattern:'node_modules/*');
+		s3Upload(bucket: "muzaffar-khan", workingDir: '.', includePathPattern:'**/*', excludePathPattern:'.git/*');
                  
             }
 
