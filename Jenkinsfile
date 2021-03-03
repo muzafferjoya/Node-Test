@@ -13,8 +13,7 @@ node {
 }
 
 
-    stage('Create S3 Bucket'){
-	sh 'aws s3 mb s3://muzaffar-khan --profile khan'
+    
 }
 
 
