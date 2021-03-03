@@ -12,11 +12,6 @@ node {
 	sh 'npm run test'
 }
 
-
-    
-}
-
-
     
     stage('AWS Credentials Check') {
 
