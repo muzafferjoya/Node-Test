@@ -15,7 +15,7 @@ node {
     
     stage('AWS Credentials Check') {
 
-        dir('/var/lib/jenkins/workspace/pipe1'){
+        dir('/var/lib/jenkins/workspace/node-test'){
 
             pwd(); 
 
@@ -23,7 +23,7 @@ node {
 
                  def identity=awsIdentity();
 		
-		s3Upload(bucket: "muzaffar-khan", workingDir: '.', includePathPattern:'**/*', excludePathPattern:'.git/*');
+		s3Upload(bucket: "muzaffar-react", workingDir: '.', includePathPattern:'**/*', excludePathPattern:'.git/*, node_modules/*, **/node_modules/**');
                  
             }
 
