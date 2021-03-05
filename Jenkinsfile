@@ -15,7 +15,7 @@ node {
     
     stage('Upload to S3 Bucket') {
 
-        dir('/var/lib/jenkins/workspace/node-test'){
+        dir('/var/lib/jenkins/workspace/newjob'){
 
             pwd(); 
 
