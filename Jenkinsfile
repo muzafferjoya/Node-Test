@@ -13,7 +13,7 @@ node {
 }
 
     
-    stage('AWS Credentials Check') {
+    stage('Upload to S3 Bucket') {
 
         dir('/var/lib/jenkins/workspace/node-test'){
 
